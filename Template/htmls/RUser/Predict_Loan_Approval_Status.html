@@ -1,0 +1,172 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 142px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style6 {color: #FF0000}
+.style8 {font-weight: bold}
+.style10 {color: #FFFF00}
+        .style11 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">PREDICT LOAN APPROVAL STATUS!!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="568" align="center">
+                                  <tr>
+                                    <td width="287" height="44" bgcolor="#FF0000"><div align="center" class="style11">Enter Loan ID </div></td>
+                                    <td width="269"><input type="text" name="Loan_ID" placeholder="Enter Loan ID"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Gender</span></strong></div></td>
+                                    <td><select name="Gender">
+                                      <option>---Select Gender---</option>
+									  <option>Male</option>
+                                      <option>Female</option>
+                                    </select>                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11">Married Statis </div></td>
+                                    <td><select name="Married">
+                                      <option>---Select Married Status ---</option>
+                                      <option>Yes</option>
+                                      <option>No</option>
+                                    </select></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11"><span class="style2">Enter Dependents </span></div></td>
+                                    <td><input type="text" name="Dependents" placeholder="Enter Dependents" ></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11">Select Education Status </div></td>
+                                    <td><select name="Education">
+                                      <option>---Select Education Status---</option>
+                                      <option>Graduate</option>
+                                      <option>Not Graduate</option>
+                                    </select>                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11">Select Employee Status </div></td>
+                                    <td><select name="Self_Employed">
+                                      <option>---Select Employee Status</option>
+                                      <option>Yes</option>
+                                      <option>No</option>
+                                    </select>                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11">Enter Applicant Income in Dollar</div></td>
+                                    <td><input type="text" name="ApplicantIncome" placeholder="Enter Applicant Income"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11">Enter Coapplicant Income in Dollar</div></td>
+                                    <td><input type="text" name="CoapplicantIncome" placeholder="Enter Coapplicant Income"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11">Enter Loan Amount in Dollar </div></td>
+                                    <td><input type="text" name="LoanAmount" placeholder="Enter Loan Amount"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11">Loan_Amount_Term in Dollar</div></td>
+                                    <td><input type="text" name="Loan_Amount_Term" placeholder="Enter Loan Amount Term"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11">Select Credit_History</div></td>
+                                    <td><select name="Credit_History">
+                                      <option>---Select  Credit History ---</option>
+                                      <option>0</option>
+                                      <option>1</option>
+                                    </select>                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11">Select Property_Area</div></td>
+                                    <td><select name="Property_Area">
+                                      <option>--- Select Property Area--</option>
+                                      <option>Urban</option>
+                                      <option>Rural</option>
+									  <option>Semiurban</option>
+									  
+                                    </select>                                    </td>
+                                  </tr>
+  <td><p>&nbsp; </p>
+          <p>
+            <input name="submit" type="submit" class="style1" value="Predict Loan Approval">
+        </p></td>
+  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div class="tweettext">
+                               <table border="5" align="center" bordercolor="#FF00FF">
+
+                    <tr><td width="312" bgcolor="#FFFF00"><div align="center"><strong><span class="style8 style6">LOAN APPROVAL PREDICTION STATUS::</span></strong></div></td>
+                          <td width="242" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">------{{objs}} ------ </div></td>
+
+                        </tr>
+
+
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

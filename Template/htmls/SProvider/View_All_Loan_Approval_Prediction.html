@@ -1,0 +1,106 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style7 {color: #FFFF00}
+        .style8 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">View All Loan Approval Prediction Status !!! </p>
+                            <hr>
+                            <div >
+                                 <table border="5" bordercolor="#FF00FF">
+
+                                <tr><td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Loan_ID</span></div></td>
+                                <td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Gender</span></div></td>
+                                <td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Married Status</span></div></td>
+                                <td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Dependents</span></div></td>
+                                <td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Education</span></div></td>
+                                <td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Employed Status</span></div></td>
+                                <td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Applicant Income</span></div></td>
+                                <td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Coapplicant Income</span></div></td>
+                                <td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Loan Amount</span></div></td>
+                                <td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Loan Amount Term</span></div></td>
+                                <td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Credit History</span></div></td>
+                                <td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Property Area</span></div></td>
+                                <td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Prediction</span></div></td>
+
+                      </tr>
+                            {% for object in objs %}
+                      <tr>
+
+                           <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Loan_ID}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Gender}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Married}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Dependents}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Education}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Self_Employed}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.ApplicantIncome}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.CoapplicantIncome}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.LoanAmount}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Loan_Amount_Term}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Credit_History}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Property_Area}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Prediction}}</div></td>
+
+                        </tr>
+                                        {% endfor %}
+                      </table>
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

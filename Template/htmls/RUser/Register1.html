@@ -1,0 +1,112 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<title>Register Your Details</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <style type="text/css">
+<!--
+.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+-->
+        </style>
+	    <head>
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background: url("{% static 'bg.jpg' %}");
+			}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+        </style>
+	</head>
+	<body>
+	<div class="container-fluid">
+		<div>
+			<h2 class="text-center style1" id="title">Prediction of Modernized Loan Approval System Based on Machine Learning Approach
+</h2>
+			 <p class="text-center">
+				<span class="style1"><small id="passwordHelpInline" class="text-muted">Machine learning, Data, Loan, Training, Testing,Prediction
+
+</small></span></p>
+			 <hr>
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+                            {% load static %}
+						<img src="{% static '/Register.jpg' %}" alt="My image"><br>
+						<span class="style1">REGISTER YOUR DETAILS HERE !!!						</span>
+						<div class="form-group">
+								<input type="text" name="username" id="username"  placeholder="User Name" required>
+						</div>
+
+							<div class="form-group">
+								<input type="email" name="email" id="email"  placeholder="Email Address" required>
+							</div>
+							<div class="form-group">
+								<input type="password" name="password" id="password"  placeholder="Password" required>
+							</div>
+								<div class="form-group">
+								<input type="number" name="phoneno" id="phoneno"  placeholder="Mobile Number" required>
+							</div>
+							<div class="form-group">
+								<input type="text" name="country" id="country"  placeholder="Country" required>
+							</div>
+							<div class="form-group">
+								<input type="text" name="state" id="state"  placeholder="State" required>
+							</div>
+							<div class="form-group">
+								<input type="text" name="city" id="city"  placeholder="City" required>
+							</div>
+
+
+						<div class="form-check">
+						  <label class="form-check-label"></label>
+						</div>
+ 							<div>
+ 									  <input type="submit" class="btn btn-lg btn-primary" name="submit"  value="sign_up" >
+ 							</div>
+					  </fieldset>
+						<div><br>
+						  <button class="btn btn-lg "><a href="{% url 'login' %}">User Login</a></button>
+					  </div>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+
+				<div class="col-md-5">				</div>
+			</div>
+		</div>
+
+	</div>
+	</body>
+
+
+</html>
