@@ -6,7 +6,7 @@ The Prediction of Modernized Loan Approval System utilizes machine learning algo
 
 ## Machine Learning Algorithms
 
-This research paper employs three main machine learning algorithms to accurately predict loan approval outcomes:
+This research paper employs three main machine learning algorithms to accurately predict loan  approval outcomes:
 
 ### (a) XGBoost
 XGBoost is an open-source software library based on decision trees. It implements machine learning algorithms using a gradient boosting framework, making it suitable for classification tasks. XGBoost is compatible with Linux, Windows, and macOS operating systems.
