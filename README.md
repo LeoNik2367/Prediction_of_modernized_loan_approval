@@ -1,7 +1,3 @@
-Sure! Here's the complete README file with all the requested sections and details:
-
----
-
 # 🏦 Prediction of Modernized Loan Approval System
 
 ## 📋 Table of Contents
